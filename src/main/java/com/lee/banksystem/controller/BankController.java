@@ -28,7 +28,9 @@ public class BankController {
         try{
             int userID = Integer.parseInt(userIDTextField.getText());
             int userPIN = Integer.parseInt(userPinTextField.getText());
-            switchScene("view/account-view.fxml");
+            if(BankModel.Login(userID, userPIN)){
+                switchScene("view/account-view.fxml");
+            }
         }
         catch (NumberFormatException e) {
             promptLabel.setText("Provide credentials to login");
@@ -36,7 +38,6 @@ public class BankController {
             throw new RuntimeException(e);
         }
     }
-
 
     void switchScene(String fxml) throws IOException {
         AnchorPane nextAnchorPane = FXMLLoader.load(Objects.requireNonNull(MainApplication.class.getResource(fxml)));

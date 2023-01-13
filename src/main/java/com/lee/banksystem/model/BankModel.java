@@ -6,7 +6,7 @@ import java.sql.*;
 public class BankModel {
     private int userID, userBalance;
 
-    public int Login(int inputuserID, int userPIN) {
+    public boolean Login(int inputuserID, int userPIN) {
         userID = inputuserID;
         Connection connection = null;
         PreparedStatement preparedStatement = null;
@@ -25,10 +25,10 @@ public class BankModel {
             } else {
                 while (resultSet.next()) {
                     int retrievedUserPIN = resultSet.getInt("userPIN");
-                    userBalance = resultSet.getInt("userBalance");
+                    //userBalance = resultSet.getInt("userBalance");
                     if (retrievedUserPIN == userPIN) {
                         System.out.println("userPIN MATCHES");
-                        return userBalance;
+                        return true;
                     } else {
                         Alert alert = new Alert(Alert.AlertType.ERROR);
                         alert.setContentText("Provided userPin incorrect");
@@ -62,7 +62,7 @@ public class BankModel {
                 }
             }
         }
-        return 0;
+        return false;
     }
 
     public int Deposit(int userInput, String operator) {
