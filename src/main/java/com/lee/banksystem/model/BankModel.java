@@ -65,6 +65,67 @@ public class BankModel {
         return false;
     }
 
+    public boolean Signup(int inputuserID, int userPIN) {
+        userID = inputuserID;
+        Connection connection = null;
+        PreparedStatement psCheckUserExists = null;
+        PreparedStatement psInsert = null;
+        ResultSet resultSet = null;
+
+        try {
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bankDB", "root", "rootpassword");
+            psCheckUserExists = connection.prepareStatement("SELECT * FROM bankDB.users WHERE userID = ?");
+            psCheckUserExists.setInt(1, userID);
+            resultSet = psCheckUserExists.executeQuery();
+
+            if(resultSet.isBeforeFirst()){
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Provided userID already exists");
+                alert.show();
+            }else{
+                //int userBalance = 0;
+                psInsert = connection.prepareStatement("INSERT INTO bankDB.users(userID, userPIN, userBalance) VALUES(?, ?, ?)");
+                psInsert.setInt(1, userID);
+                psInsert.setInt(2, userPIN);
+                psInsert.setInt(3, 0);
+                psInsert.executeUpdate();
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            if (resultSet != null) {
+                try {
+                    resultSet.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (psCheckUserExists != null) {
+                try {
+                    psCheckUserExists.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (psInsert != null) {
+                try {
+                    psInsert.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return false;
+    }
+
     public int Deposit(int userInput, String operator) {
         if(operator.equals("Deposit")){
             userBalance = userBalance + userInput;

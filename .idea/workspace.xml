@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06cb639a-735a-412d-abb5-0da46e67d9ad" name="Changes" comment="login feat : simple switch to another view if inputs are integers">
+    <list default="true" id="06cb639a-735a-412d-abb5-0da46e67d9ad" name="Changes" comment="database login feat : switch scene if details match those in database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lee/banksystem/controller/BankController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lee/banksystem/controller/BankController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lee/banksystem/model/BankModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lee/banksystem/model/BankModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/lee/banksystem/view/bank-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lee/banksystem/view/bank-view.fxml" afterDir="false" />
@@ -84,7 +83,9 @@
       <workItem from="1673182152495" duration="243000" />
       <workItem from="1673395563878" duration="14000" />
       <workItem from="1673427663668" duration="6000" />
-      <workItem from="1673591738773" duration="2843000" />
+      <workItem from="1673591738773" duration="3038000" />
+      <workItem from="1673811980512" duration="179000" />
+      <workItem from="1673812970185" duration="3604000" />
     </task>
     <task id="LOCAL-00001" summary="login feat : simple switch to another view if inputs are integers">
       <created>1673593670089</created>
@@ -93,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673593670089</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="database login feat : switch scene if details match those in database">
+      <created>1673594664072</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673594664072</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +121,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="login feat : simple login if input matches database entry" />
     <MESSAGE value="login feat : simple switch to another view if inputs are integers" />
-    <option name="LAST_COMMIT_MESSAGE" value="login feat : simple switch to another view if inputs are integers" />
+    <MESSAGE value="database login feat : switch scene if details match those in database" />
+    <option name="LAST_COMMIT_MESSAGE" value="database login feat : switch scene if details match those in database" />
   </component>
 </project>

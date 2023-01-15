@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="bankAnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lee.banksystem.controller.BankController">
@@ -12,8 +13,21 @@
          <Font size="31.0" />
       </font>
    </Label>
-   <TextField fx:id="userIDTextField" layoutX="226.0" layoutY="163.0" promptText="userID" />
-   <TextField fx:id="userPinTextField" layoutX="226.0" layoutY="212.0" promptText="userPin" />
-   <Button layoutX="277.0" layoutY="276.0" onAction="#onLoginButtonClick" text="Login" />
-   <Label fx:id="promptLabel" alignment="CENTER" layoutX="224.0" layoutY="250.0" prefHeight="18.0" prefWidth="150.0" />
+   <Pane fx:id="signupPane" layoutX="201.0" layoutY="125.0" prefHeight="225.0" prefWidth="200.0" visible="false">
+      <TextField fx:id="newuserIDTextField" layoutX="26.0" layoutY="24.0" promptText="userID"/>
+      <TextField fx:id="newuserPinTextField" layoutX="26.0" layoutY="65.0" promptText="userPin"/>
+      <TextField fx:id="newuserPinCheckTextField" layoutX="26.0" layoutY="102.0" promptText="confirm userPin"/>
+      <Label fx:id="newpromptLabel" alignment="CENTER" layoutX="25.0" layoutY="135.0" prefHeight="18.0"
+             prefWidth="150.0"/>
+      <Button layoutX="71.0" layoutY="161.0" onAction="#onSignupButtonClick" text="Sign Up"/>
+      <Button layoutX="54.0" layoutY="199.0" mnemonicParsing="false" onAction="#onExistingUserClick"
+              text="Exisiting user?"/>
+   </Pane>
+   <Pane fx:id="loginPane" layoutX="201.0" layoutY="125.0" prefHeight="225.0" prefWidth="200.0">
+      <TextField fx:id="userIDTextField" layoutX="26.0" layoutY="54.0" promptText="userID"/>
+      <TextField fx:id="userPinTextField" layoutX="25.0" layoutY="100.0" promptText="userPin"/>
+      <Label fx:id="promptLabel" alignment="CENTER" layoutX="24.0" layoutY="133.0" prefHeight="18.0" prefWidth="150.0"/>
+      <Button layoutX="77.0" layoutY="161.0" onAction="#onLoginButtonClick" text="Login"/>
+      <Button layoutX="65.0" layoutY="199.0" mnemonicParsing="false" onAction="#onNewUserClick" text="New user?"/>
+   </Pane>
 </AnchorPane>
