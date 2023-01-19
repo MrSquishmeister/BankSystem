@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06cb639a-735a-412d-abb5-0da46e67d9ad" name="Changes" comment="account balance + firstname: information stored in static variables in UserInfo class to be called for later use when setting labels">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/lee/banksystem/images/Nordic.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lee/banksystem/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lee/banksystem/style/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lee/banksystem/view/account-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lee/banksystem/view/account-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lee/banksystem/view/bank-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lee/banksystem/view/bank-view.fxml" afterDir="false" />
+    <list default="true" id="06cb639a-735a-412d-abb5-0da46e67d9ad" name="Changes" comment="bank-view style: buttons, textfields and side pane styled to improved introduction view">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lee/banksystem/controller/BankController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lee/banksystem/controller/BankController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +91,7 @@
       <workItem from="1673811980512" duration="179000" />
       <workItem from="1673812970185" duration="3931000" />
       <workItem from="1673874339003" duration="25000" />
-      <workItem from="1674091168196" duration="8223000" />
+      <workItem from="1674091168196" duration="8549000" />
     </task>
     <task id="LOCAL-00001" summary="login feat : simple switch to another view if inputs are integers">
       <created>1673593670089</created>
@@ -126,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674094855928</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="bank-view style: buttons, textfields and side pane styled to improved introduction view">
+      <created>1674099722781</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674099722781</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +151,7 @@
     <MESSAGE value="database login feat : switch scene if details match those in database" />
     <MESSAGE value="database signup feat : signup and insert data into database table" />
     <MESSAGE value="account balance + firstname: information stored in static variables in UserInfo class to be called for later use when setting labels" />
-    <option name="LAST_COMMIT_MESSAGE" value="account balance + firstname: information stored in static variables in UserInfo class to be called for later use when setting labels" />
+    <MESSAGE value="bank-view style: buttons, textfields and side pane styled to improved introduction view" />
+    <option name="LAST_COMMIT_MESSAGE" value="bank-view style: buttons, textfields and side pane styled to improved introduction view" />
   </component>
 </project>

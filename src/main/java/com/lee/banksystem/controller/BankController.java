@@ -78,12 +78,17 @@ public class BankController {
     void onNewUserClick(){
         loginPane.setVisible(false);
         signupPane.setVisible(true);
+        userIDTextField.clear();
+        userPinTextField.clear();
     }
 
     @FXML
     void onExistingUserClick(){
         signupPane.setVisible(false);
         loginPane.setVisible(true);
+        newuserIDTextField.clear();
+        newuserPinTextField.clear();
+        newuserPinCheckTextField.clear();
     }
 
     void switchScene(String fxml) throws IOException {
