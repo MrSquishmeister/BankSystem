@@ -7,27 +7,26 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="bankAnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lee.banksystem.controller.BankController">
-   <Label alignment="CENTER" layoutX="213.0" layoutY="76.0" text="Bank System">
+<AnchorPane fx:id="bankAnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lee.banksystem.controller.BankController">
+   <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="296.0" layoutY="26.0" prefHeight="101.0" prefWidth="291.0" text="Bank of Lawrence" wrapText="true">
       <font>
-         <Font size="31.0" />
+         <Font size="33.0" />
       </font>
    </Label>
-   <Pane fx:id="signupPane" layoutX="201.0" layoutY="125.0" prefHeight="225.0" prefWidth="200.0" visible="false">
-      <TextField fx:id="newuserIDTextField" layoutX="26.0" layoutY="24.0" promptText="userID"/>
-      <TextField fx:id="newuserPinTextField" layoutX="26.0" layoutY="65.0" promptText="userPin"/>
-      <TextField fx:id="newuserPinCheckTextField" layoutX="26.0" layoutY="102.0" promptText="confirm userPin"/>
-      <Label fx:id="newpromptLabel" alignment="CENTER" layoutX="25.0" layoutY="135.0" prefHeight="18.0"
-             prefWidth="150.0"/>
-      <Button layoutX="71.0" layoutY="161.0" onAction="#onSignupButtonClick" text="Sign Up"/>
-      <Button layoutX="54.0" layoutY="199.0" mnemonicParsing="false" onAction="#onExistingUserClick"
-              text="Exisiting user?"/>
+   <Pane fx:id="sidePane" prefHeight="400.0" prefWidth="273.0" />
+   <Pane fx:id="signupPane" layoutX="342.0" layoutY="103.0" prefHeight="270.0" prefWidth="200.0" visible="false">
+      <TextField fx:id="newuserIDTextField" layoutX="26.0" layoutY="30.0" promptText="userID" />
+      <TextField fx:id="newuserPinTextField" layoutX="25.0" layoutY="80.0" promptText="userPin" />
+      <TextField fx:id="newuserPinCheckTextField" layoutX="25.0" layoutY="130.0" promptText="confirm userPin" />
+      <Label fx:id="newpromptLabel" alignment="CENTER" layoutX="25.0" layoutY="160.0" prefHeight="18.0" prefWidth="150.0" />
+      <Button layoutX="27.0" layoutY="188.0" onAction="#onSignupButtonClick" prefHeight="25.0" prefWidth="150.0" text="Sign Up" />
+      <Button fx:id="linkButton" layoutX="28.0" layoutY="231.0" mnemonicParsing="false" onAction="#onExistingUserClick" text="Existing user? Click here" />
    </Pane>
-   <Pane fx:id="loginPane" layoutX="201.0" layoutY="125.0" prefHeight="225.0" prefWidth="200.0">
-      <TextField fx:id="userIDTextField" layoutX="26.0" layoutY="54.0" promptText="userID"/>
-      <TextField fx:id="userPinTextField" layoutX="25.0" layoutY="100.0" promptText="userPin"/>
-      <Label fx:id="promptLabel" alignment="CENTER" layoutX="24.0" layoutY="133.0" prefHeight="18.0" prefWidth="150.0"/>
-      <Button layoutX="77.0" layoutY="161.0" onAction="#onLoginButtonClick" text="Login"/>
-      <Button layoutX="65.0" layoutY="199.0" mnemonicParsing="false" onAction="#onNewUserClick" text="New user?"/>
+   <Pane fx:id="loginPane" layoutX="342.0" layoutY="103.0" prefHeight="270.0" prefWidth="200.0">
+      <TextField fx:id="userIDTextField" layoutX="26.0" layoutY="50.0" promptText="userID" />
+      <TextField fx:id="userPinTextField" layoutX="25.0" layoutY="100.0" promptText="userPin" />
+      <Label fx:id="promptLabel" alignment="CENTER" layoutX="26.0" layoutY="160.0" prefHeight="18.0" prefWidth="150.0" />
+      <Button layoutX="27.0" layoutY="188.0" onAction="#onLoginButtonClick" prefHeight="25.0" prefWidth="150.0" text="Login" />
+      <Button fx:id="linkButton" layoutX="36.0" layoutY="231.0" mnemonicParsing="false" onAction="#onNewUserClick" prefHeight="18.0" prefWidth="126.0" text="New user? Click here" />
    </Pane>
 </AnchorPane>
