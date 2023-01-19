@@ -4,17 +4,14 @@ import javafx.scene.control.Alert;
 import java.sql.*;
 
 public class BankModel {
-    private int userID, userBalance;
-
-    public boolean Login(int inputuserID, int userPIN) {
-        userID = inputuserID;
+    public boolean Login(int userID, int userPIN) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
 
         try {
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bankDB", "root", "rootpassword");
-            preparedStatement = connection.prepareStatement("SELECT userPIN, userBalance FROM bankDB.users WHERE userID = ?");
+            preparedStatement = connection.prepareStatement("SELECT userPIN, userBalance, userFirstname, userLastname FROM bankDB.users WHERE userID = ?");
             preparedStatement.setInt(1, userID);
             resultSet = preparedStatement.executeQuery();
 
@@ -25,13 +22,16 @@ public class BankModel {
             } else {
                 while (resultSet.next()) {
                     int retrievedUserPIN = resultSet.getInt("userPIN");
-                    //userBalance = resultSet.getInt("userBalance");
+                    UserInfo.userBalance = resultSet.getInt("userBalance");
+                    UserInfo.userFirstname = resultSet.getString("userFirstname");
+                    UserInfo.userLastname = resultSet.getString("userLastname");
+                    UserInfo.userID = userID;
                     if (retrievedUserPIN == userPIN) {
-                        System.out.println("userPIN MATCHES");
+                        System.out.println("PIN MATCHES");
                         return true;
                     } else {
                         Alert alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setContentText("Provided userPin incorrect");
+                        alert.setContentText("Provided Pin incorrect");
                         alert.show();
                     }
                 }
@@ -65,8 +65,7 @@ public class BankModel {
         return false;
     }
 
-    public boolean Signup(int inputuserID, int userPIN) {
-        userID = inputuserID;
+    public boolean Signup(int userID, int userPIN) {
         Connection connection = null;
         PreparedStatement psCheckUserExists = null;
         PreparedStatement psInsert = null;
@@ -83,12 +82,13 @@ public class BankModel {
                 alert.setContentText("Provided userID already exists");
                 alert.show();
             }else{
-                //int userBalance = 0;
                 psInsert = connection.prepareStatement("INSERT INTO bankDB.users(userID, userPIN, userBalance) VALUES(?, ?, ?)");
                 psInsert.setInt(1, userID);
                 psInsert.setInt(2, userPIN);
                 psInsert.setInt(3, 0);
                 psInsert.executeUpdate();
+                UserInfo.userID = userID;
+                UserInfo.userBalance = 0;
                 return true;
             }
         } catch (SQLException e) {
@@ -126,11 +126,11 @@ public class BankModel {
         return false;
     }
 
-    public int Deposit(int userInput, String operator) {
+    public int DepositorWithdraw(int userInput, String operator) {
         if(operator.equals("Deposit")){
-            userBalance = userBalance + userInput;
+            UserInfo.userBalance += userInput;
         }else if (operator.equals("Withdraw")){
-            userBalance = userBalance - userInput;
+            UserInfo.userBalance -= userInput;
         }
 
         Connection connection = null;
@@ -139,8 +139,8 @@ public class BankModel {
         try {
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bankDB", "root", "rootpassword");
             preparedStatement = connection.prepareStatement("UPDATE bankDB.users SET userBalance = ?  WHERE userID = ?");
-            preparedStatement.setInt(1, userBalance);
-            preparedStatement.setInt(2, userID);
+            preparedStatement.setInt(1, UserInfo.userBalance);
+            preparedStatement.setInt(2, UserInfo.userID);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -160,7 +160,7 @@ public class BankModel {
                 }
             }
         }
-        return userBalance;
+        return UserInfo.userBalance;
     }
 
 }

@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06cb639a-735a-412d-abb5-0da46e67d9ad" name="Changes" comment="database login feat : switch scene if details match those in database">
+    <list default="true" id="06cb639a-735a-412d-abb5-0da46e67d9ad" name="Changes" comment="database signup feat : signup and insert data into database table">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lee/banksystem/model/UserInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lee/banksystem/controller/BankController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lee/banksystem/controller/BankController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lee/banksystem/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lee/banksystem/controller/AccountController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lee/banksystem/model/BankModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lee/banksystem/model/BankModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lee/banksystem/view/bank-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lee/banksystem/view/bank-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lee/banksystem/view/account-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lee/banksystem/view/account-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,16 +36,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/User/OneDrive/Documents/Other/Java Projects/BankSystem",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/OneDrive/Documents/Other/Java Projects/BankSystem&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="BankSystem" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -85,7 +86,9 @@
       <workItem from="1673427663668" duration="6000" />
       <workItem from="1673591738773" duration="3038000" />
       <workItem from="1673811980512" duration="179000" />
-      <workItem from="1673812970185" duration="3604000" />
+      <workItem from="1673812970185" duration="3931000" />
+      <workItem from="1673874339003" duration="25000" />
+      <workItem from="1674091168196" duration="3568000" />
     </task>
     <task id="LOCAL-00001" summary="login feat : simple switch to another view if inputs are integers">
       <created>1673593670089</created>
@@ -101,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673594664072</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="database signup feat : signup and insert data into database table">
+      <created>1673816896397</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673816896397</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +132,7 @@
     <MESSAGE value="login feat : simple login if input matches database entry" />
     <MESSAGE value="login feat : simple switch to another view if inputs are integers" />
     <MESSAGE value="database login feat : switch scene if details match those in database" />
-    <option name="LAST_COMMIT_MESSAGE" value="database login feat : switch scene if details match those in database" />
+    <MESSAGE value="database signup feat : signup and insert data into database table" />
+    <option name="LAST_COMMIT_MESSAGE" value="database signup feat : signup and insert data into database table" />
   </component>
 </project>
