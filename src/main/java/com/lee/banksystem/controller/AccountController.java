@@ -23,7 +23,7 @@ public class AccountController {
 
     @FXML
     public void initialize (){
-        titleLabel.setText("Welcome to the Bank, " + UserInfo.userFirstname + " " + UserInfo.userLastname);
+        titleLabel.setText("Welcome, " + UserInfo.userFirstname + " " + UserInfo.userLastname);
         balanceLabel.setText("Balance : £" + UserInfo.userBalance);
     }
 
@@ -33,8 +33,8 @@ public class AccountController {
         String operatorString = button.getText();
         try{
             int userInput = Integer.parseInt(inputTextField.getText());
-            int userBalance = BankModel.DepositorWithdraw(userInput, operatorString);
-            balanceLabel.setText("Balance: £" + userBalance);
+            balanceLabel.setText("Balance: £" + (BankModel.DepositorWithdraw(userInput, operatorString)));
+            inputTextField.clear();
         }catch (NumberFormatException e){
             System.out.println("NOT INT");
         }

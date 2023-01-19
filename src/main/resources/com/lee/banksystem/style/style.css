@@ -18,6 +18,11 @@
     -fx-cursor: hand;
 }
 
+#titleLabel{
+    -fx-font-weight: bold;
+    -fx-text-fill: #c8c7cd;
+}
+
 #bankAnchorPane{
     -fx-background-color: #f7f7fa;
 }
@@ -28,7 +33,6 @@
     -fx-background-size: 360%;
 }
 
-#titleLabel{
-    -fx-font-weight: bold;
-    -fx-text-fill: #c8c7cd;
+#accountAnchorPane{
+    -fx-background-color: #f7f7fa;
 }
